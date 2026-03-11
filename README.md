@@ -18,7 +18,7 @@ make
 ./hashcat --help
 ```
 
-# Hashcat Hash Modes
+## Hashcat Hash Modes
 ```
 hashcat -m 0 hashes.txt wordlist.txt                       #MD5 Hash
 hashcat -m 100 hashes.txt wordlist.txt                     #SHA1
@@ -51,7 +51,7 @@ hashcat -m 18300 hashes.txt wordlist.txt                   #BitLocker
 hashcat -m 19500 hashes.txt wordlist.txt                   #MS Office 2016
 ```
 
-## Attack modes availabe are:
+### Attack modes availabe are:
 ```
 -a
 0 | Straight
@@ -60,6 +60,28 @@ hashcat -m 19500 hashes.txt wordlist.txt                   #MS Office 2016
 6 | Hybrid Wordlist + Mask
 7 | Hybrid Mask + Wordlist
 9 | Association
+```
+Some examples of common attack modes are shown below:
+```
+hashcat -a 0 -m 0 hashes.txt wordlist.txt                 #Wordlist Attack
+hashcat -a 3 -m 0 hashes.txt ?a?a?a?a                     #Mask Attack
+hashcat -a 6 -m 0 hashes.txt wordlist.txt ?d?d            #Hybrid Wordlist + Mask
+hashcat -a 7 -m 0 hashes.txt ?d?d wordlist.txt            #Hybrid Mask + Wordlist
+hashcat -a 1 -m 0 hashes.txt wordlist1.txt wordlist2.txt  #Combinator Attack
+```
+
+## Real Pentesting Attack Scenerios
+```
+hashcat -m 1000 hashes.txt rockyou.txt               #Crack NTLM hashes from a Windows dump
+hashcat -m 5600 netntlmv2.txt rockyou.txt            #Crack captured NetNTLMv2 hashes
+hashcat -m 18200 asrep_hashes.txt rockyou.txt        #Crack AS-REP roasted Kerberos hashes
+hashcat -m 13100 kerberoast_hashes.txt rockyou.txt   #Crack Kerberoasted service tickets
+hashcat -m 2100 dcc_hashes.txt rockyou.txt           #Crack Domain Cached Credentials (DCC2)
+hashcat -m 7500 wifi.hccapx rockyou.txt              #Crack WPA/WPA2 handshake
+hashcat -m 11600 7zip.hash rockyou.txt               #Crack 7zip encrypted archive
+hashcat -m 13600 keepass.hash rockyou.txt            #Crack KeePass database password
+hashcat -m 9600 office.hash rockyou.txt              #Crack MS Office document password
+hashcat -m 10500 pdf.hash rockyou.txt                #Crack PDF password
 ```
 
 
