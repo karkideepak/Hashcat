@@ -1,25 +1,25 @@
 # Hashcat
 password-cracking tool widely used in security testing
-``` and after the closing ```
 ## Installation & Setup
 ### Debian/Ubuntu:
-''' javascript
-sudo apt update && sudo apt install hashcat
-'''
+```sudo apt update && sudo apt install hashcat```
 ### MacOS:
-brew install hashcat
+```brew install hashcat```
 
 ### Using Docker
-docker pull hashcat/hashcat
-docker run -it --rm hashcat/hashcat --help
+```docker pull hashcat/hashcat ```
+```docker run -it --rm hashcat/hashcat --help```
 
 ### From Source:
+```
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
 ./hashcat --help
+```
 
 # Hashcat Hash Modes
+```
 hashcat -m 0 hashes.txt wordlist.txt                       #MD5 Hash
 hashcat -m 100 hashes.txt wordlist.txt                     #SHA1
 hashcat -m 1400 hashes.txt wordlist.txt                    #SHA256
@@ -49,8 +49,10 @@ hashcat -m 13711 hashes.txt wordlist.txt                   #VeraCrypt SHA256 + X
 hashcat -m 11300 hashes.txt wordlist.txt                   #TrueCrypt PBKDF2-SHA512 + XTS
 hashcat -m 18300 hashes.txt wordlist.txt                   #BitLocker
 hashcat -m 19500 hashes.txt wordlist.txt                   #MS Office 2016
+```
 
 ## Attack modes availabe are:
+```
 -a
 0 | Straight
 1 | Combination
@@ -58,5 +60,6 @@ hashcat -m 19500 hashes.txt wordlist.txt                   #MS Office 2016
 6 | Hybrid Wordlist + Mask
 7 | Hybrid Mask + Wordlist
 9 | Association
+```
 
 
