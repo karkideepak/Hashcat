@@ -72,7 +72,7 @@ hashcat -a 7 -m 0 hashes.txt ?d?d wordlist.txt            #Hybrid Mask + Wordlis
 hashcat -a 1 -m 0 hashes.txt wordlist1.txt wordlist2.txt  #Combinator Attack
 ```
 
-## Real Pentesting Attack Scenerios
+### Real Pentesting Attack Scenerios
 ```
 hashcat -m 1000 hashes.txt rockyou.txt               #Crack NTLM hashes from a Windows dump
 hashcat -m 5600 netntlmv2.txt rockyou.txt            #Crack captured NetNTLMv2 hashes
