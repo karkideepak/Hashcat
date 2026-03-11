@@ -1,6 +1,6 @@
 # Hashcat
 password-cracking tool widely used in security testing
-
+``` and after the closing ```
 ## Installation & Setup
 ### Debian/Ubuntu:
 ''' javascript
