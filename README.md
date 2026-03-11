@@ -3,7 +3,7 @@ password-cracking tool widely used in security testing
 
 ## Installation & Setup
 ### Debian/Ubuntu:
-'''javascript
+''' javascript
 sudo apt update && sudo apt install hashcat
 '''
 
