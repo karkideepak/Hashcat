@@ -8,7 +8,7 @@
 
 ### Using Docker
 ```docker pull hashcat/hashcat ```
-*** ***
+
 ```docker run -it --rm hashcat/hashcat --help```
 
 ### From Source:
@@ -18,6 +18,7 @@ cd hashcat
 make
 ./hashcat --help
 ```
+*** ***
 
 ## Hashcat Hash Modes
 ```
