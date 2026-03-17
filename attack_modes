@@ -6,3 +6,6 @@ Example: hashcat -m 500 -a 1 hash.txt dict1.txt dict2.txt
 
 3 = Brute Force Attack
 Example: hashcat -m 500 -a 3 hash.txt ?l?d?u
+
+6 = Hybrid Wordlist + Mask
+Example: hashcat -m 500 -a 6 hash.txt wordlist.txt ?d?s
