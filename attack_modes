@@ -1,2 +1,5 @@
 0 = Straight Dictionary Attack
 Example: hashcat -m 500 -a 0 hash.txt dict.txt
+
+1 = Combination Attack
+Example: hashcat -m 500 -a 1 hash.txt dict1.txt dict2.txt
