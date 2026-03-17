@@ -1,0 +1,2 @@
+0 = Straight Dictionary Attack
+Example: hashcat -m 500 -a 0 hash.txt dict.txt
