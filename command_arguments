@@ -5,3 +5,5 @@
 "-o" 	Define output file for recovered hash.
 
 "--show"	Show the cracked hashes.
+
+"--username" 	Enable ignoring of usernames in hashfile.
