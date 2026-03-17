@@ -1,3 +1,5 @@
 "--runtime=X"	Abort session after X seconds of runtime.
 
 "--session=X"	Define session name to be string X.
+
+"-o" 	Define output file for recovered hash.
