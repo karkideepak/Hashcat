@@ -1,0 +1,1 @@
+hashcat -m [Hash_Type] -a [Attack_Mode] [Hash_File] [Wordlist_or_Mask]
