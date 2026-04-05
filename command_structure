@@ -1,1 +1,8 @@
 hashcat -m [Hash_Type] -a [Attack_Mode] [Hash_File] [Wordlist_or_Mask]
+
+Dictionary Attack (-a 0): Uses a wordlist to crack hashes.
+Example: hashcat -m 0 -a 0 hashes.txt rockyou.txt (Cracks MD5)
+Mask Attack (-a 3): Brute-forces based on a custom pattern.
+Example: hashcat -m 0 -a 3 hashes.txt ?a?a?a?a?a?a (Tests all 6-character combinations)
+Hybrid Attack (-a 6): Combines a dictionary word with a mask (e.g., wordlist + digits).
+Example: hashcat -m 0 -a 6 hashes.txt rockyou.txt ?d?d?d (Appends 3 digits to dictionary words)
