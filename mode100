@@ -1,0 +1,1 @@
+hashcat -m 100 -a 0 sha1_hashes.txt rockyou.txt
